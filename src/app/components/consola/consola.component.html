@@ -8,8 +8,8 @@
   <!--   <h4>Mapa</h4> -->
 
   <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <agm-marker *ngFor="let usuario of usuarios" [latitude]="usuario.lat" [longitude]="usuario.lng" [label]="usuario.nombre|uppercase"
-      [title]="usuario.nombre"></agm-marker>
+    <agm-marker *ngFor="let usuario of usuarios" (markerClick)="onMarkerClick(usuario)" [latitude]="usuario.lat" [longitude]="usuario.lng"
+      [label]="usuario.nombre|uppercase" [title]="usuario.nombre"></agm-marker>
   </agm-map>
 
 </div>
