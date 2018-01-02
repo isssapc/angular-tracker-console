@@ -8,8 +8,9 @@ import { UbicacionService } from '../../services/ubicacion.service';
 })
 export class ConsolaComponent implements OnInit {
 
-  lat: number = 51.678418;
-  lng: number = 7.809007;
+  lat: number = 16.7516009;
+  lng: number = -93.1029939;
+  zoom:number= 15;
   usuarios: any[] = [];
   usuario_selected: any = {};
 
