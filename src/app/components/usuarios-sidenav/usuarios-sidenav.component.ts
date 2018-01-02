@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material';
+import { UbicacionService } from '../../services/ubicacion.service';
 
 @Component({
   selector: 'usuarios-sidenav',
@@ -15,9 +16,16 @@ export class UsuariosSidenavComponent implements OnInit {
   usuarios: any[] = [];
 
 
-  constructor() { }
+  constructor(
+    private ubicacionSrv: UbicacionService
+  ) { }
 
   ngOnInit() {
+
+    this.ubicacionSrv.getUsuarios()
+      .subscribe(usuarios => {
+        this.usuarios = usuarios;
+      });
   }
 
 }
