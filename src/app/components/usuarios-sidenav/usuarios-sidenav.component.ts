@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 
 @Component({
-  selector: 'app-usuarios-sidenav',
+  selector: 'usuarios-sidenav',
   templateUrl: './usuarios-sidenav.component.html',
   styleUrls: ['./usuarios-sidenav.component.scss']
 })
