@@ -15,13 +15,15 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { ConsolaComponent } from './components/consola/consola.component';
 import { UbicacionService } from './services/ubicacion.service';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import { UsuariosSidenavComponent } from './components/usuarios-sidenav/usuarios-sidenav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    ConsolaComponent
+    ConsolaComponent,
+    UsuariosSidenavComponent
   ],
   imports: [
     BrowserModule,
