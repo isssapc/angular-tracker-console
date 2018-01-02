@@ -1,20 +1,20 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 
 
-  <div class="row">
+  <div class="row"> -->
 
 
-    <div class="col-12">
-      <!--   <h4>Mapa</h4> -->
+<div style="position:relative; height:100%">
+  <!--   <h4>Mapa</h4> -->
 
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker [latitude]="usuario_selected.lat" [longitude]="usuario_selected.lng" [label]="usuario_selected.nombre|uppercase"
-          [title]="usuario_selected.nombre"></agm-marker>
-      </agm-map>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker *ngFor="let usuario of usuarios" [latitude]="usuario.lat" [longitude]="usuario.lng" [label]="usuario.nombre|uppercase"
+      [title]="usuario.nombre"></agm-marker>
+  </agm-map>
 
-    </div>
+</div>
 
-    <!--     <div class="col-md-2">
+<!--     <div class="col-md-2">
       <h4>Usuarios</h4>
       <p>Seleccione para seguir</p>
 
@@ -32,9 +32,8 @@
  -->
 
 
-  </div>
+<!--   </div>
 
 
 
-
-</div>
+</div> -->

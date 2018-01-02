@@ -10,7 +10,7 @@ export class ConsolaComponent implements OnInit {
 
   lat: number = 16.7516009;
   lng: number = -93.1029939;
-  zoom:number= 15;
+  zoom:number= 13;
   usuarios: any[] = [];
   usuario_selected: any = {};
 
@@ -24,6 +24,7 @@ export class ConsolaComponent implements OnInit {
     this.ubicacionSrv.getUsuarios()
       .subscribe(usuarios => {
         this.usuarios = usuarios;
+
       });
 
   }
