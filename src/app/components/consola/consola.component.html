@@ -1,0 +1,40 @@
+<div class="container-fluid">
+
+
+  <div class="row">
+
+
+    <div class="col-md-10">
+      <h4>Mapa</h4>
+
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="usuario_selected.lat" [longitude]="usuario_selected.lng" [label]="usuario_selected.nombre|uppercase"
+          [title]="usuario_selected.nombre"></agm-marker>
+      </agm-map>
+
+    </div>
+
+    <div class="col-md-2">
+      <h4>Usuarios</h4>
+      <p>Seleccione para seguir</p>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let usuario of usuarios" (click)="seguirUsuario(usuario)">{{usuario.nombre}}</li>
+
+      </ul>
+
+
+
+      <button class="btn btn-primary btn-block mt-3">Dejar de seguir</button>
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+</div>
